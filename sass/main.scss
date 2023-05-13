@@ -1,6 +1,34 @@
+// Fuentes
+
+    @font-face {
+
+    font-family: "start";
+
+    src: url(../asets/text/PressStart2P-Regular.ttf);
+
+}
+
+    @font-face {
+
+    font-family: "monserrat";
+
+    src: url(../asets/text/Montserrat-Italic-VariableFont_wght.ttf);
+
+}
+
 // Import
 
-@import "./utils/variables";
+    // Header
+
+    @import "./components/header";
+
+    // Globales
+
+    @import "./utils/global";
+
+    // Variables
+
+    @import "./utils/variables";
 
 // Anidamiento en sass
 

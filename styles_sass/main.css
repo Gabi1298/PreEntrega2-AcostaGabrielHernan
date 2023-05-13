@@ -1,3 +1,93 @@
+@font-face {
+  font-family: "start";
+  src: url(../asets/text/PressStart2P-Regular.ttf);
+}
+@font-face {
+  font-family: "monserrat";
+  src: url(../asets/text/Montserrat-Italic-VariableFont_wght.ttf);
+}
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  /* background-color: #146C94; */
+}
+.header--logo {
+  border-radius: 20px;
+  width: 80px;
+  height: 60px;
+}
+.header--self {
+  justify-self: center;
+}
+.header--titulo {
+  font-family: "start";
+  font-weight: 100;
+  font-size: 25px;
+  color: #19A7CE;
+  text-align: center;
+}
+.header__desktop {
+  display: none;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.header__desktop--a {
+  color: #19A7CE;
+}
+.header__desktop--a:hover {
+  text-shadow: 2px 2px 1px #AFD3E2;
+}
+.header__desktop--texto {
+  font-family: "start";
+  color: #19A7CE;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.header__mobile--item {
+  font-family: "start";
+  color: #19A7CE;
+  font-size: 10px;
+  text-align: center;
+  margin: 20px 0;
+}
+.header.header__mobile--icono {
+  color: #19A7CE;
+  font-size: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body--bg {
+  background-color: black;
+  height: 100%;
+  background-size: cover;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.2;
+}
+
 .main {
   display: flex;
   justify-content: center;

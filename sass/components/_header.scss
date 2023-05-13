@@ -1,0 +1,107 @@
+@import "../utils/variables";
+
+.header{
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-content: center;
+
+    align-content: center;
+
+    justify-items: center;
+
+    align-items: center;
+
+    /* background-color: #146C94; */
+
+    &--logo{
+
+        border-radius: 20px;
+    
+        width: 80px;
+    
+        height: 60px;
+    
+    }
+
+    &--self{
+
+        justify-self: center;
+    
+    }
+
+    &--titulo{
+
+        font-family: "start";
+    
+        font-weight: 100;
+    
+        font-size: 25px;
+    
+        color: $Color_texto;
+    
+        text-align: center;
+    
+    }
+
+    &__desktop{
+
+        display: none;
+    
+        flex-flow: column nowrap;
+    
+        align-items: center;
+
+        &--a{
+
+            color: $Color_texto;
+
+        }
+
+        &--a:hover{
+
+            text-shadow: 2px 2px 1px #AFD3E2;
+
+        }
+
+        &--texto{
+
+            font-family: "start";
+        
+            color: $Color_texto;
+        
+            padding-top: 20px;
+        
+            padding-bottom: 20px;
+        
+            text-align: center;
+        
+        }
+    
+    }
+
+    &__mobile--item{
+
+        font-family: "start";
+    
+        color: $Color_texto;
+    
+        font-size: 10px;
+    
+        text-align: center;
+    
+        margin: 20px 0;
+    
+    }
+
+    &.header__mobile--icono{
+
+        color: $Color_texto;
+    
+        font-size: 50px;
+    
+    }
+
+}

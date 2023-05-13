@@ -1,0 +1,14 @@
+{
+  "name": "preentrega2-acostagabrielhernan",
+  "version": "1.0.0",
+  "description": "Esta es mi segunda Pre-Entrega sobre el desarrollo de una pagina web, la misma la estoy realizando en la institucion **CoderHouse**.",
+  "main": "index.js",
+  "scripts": {
+    "build-sass": "sass ./sass/main.scss ./styles_sass/main.css -w --no-source-map" 
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.62.1"
+  }
+}

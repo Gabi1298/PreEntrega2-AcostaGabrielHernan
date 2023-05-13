@@ -255,6 +255,18 @@ p {
 
 }
 
+.main__container__formulario{
+
+    display: flex;
+
+    flex-flow: row wrap;
+
+    justify-content: center;
+
+    margin: 5px 0;
+
+}
+
 .main__container__formulario--label{
 
     text-align: center;
@@ -266,18 +278,6 @@ p {
     font-size: 12px;
 
     color: #19A7CE ;
-
-}
-
-.main__container__formulario{
-
-    display: flex;
-
-    flex-flow: row wrap;
-
-    justify-content: center;
-
-    margin: 5px 0;
 
 }
 
@@ -353,7 +353,6 @@ p {
 .main__container--horarios{
 
     width: 215px;
-
 
     height: 30px;
 

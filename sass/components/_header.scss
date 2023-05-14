@@ -105,3 +105,113 @@
     }
 
 }
+
+@media (min-width: $bpS) {
+
+    .header{
+
+        &--titulo{
+
+            font-size: 30px;
+    
+        }
+
+        &--logo{
+
+            width: 120px;
+    
+            height: 80px;
+    
+        }
+
+    }
+
+}
+
+@media (min-width: $bpM) {
+
+    .header{
+
+        &--titulo{
+
+            font-size: 35px;
+        }
+
+        &--logo{
+
+            width: 150px;
+    
+            height: 100px;
+        }
+
+        &__mobile{
+
+            &--icono{
+
+                font-size: 60px;
+        
+            }
+
+        }
+
+    }
+
+}
+
+@media (min-width: $bpL) {
+
+    .header{
+
+        &--logo{
+
+            width: 170px;
+    
+            height: 110px;
+
+        }
+
+        &--titulo{
+
+            font-size: 40px;
+        }
+
+    }
+
+}
+
+@media (min-width: $bpXL) {
+
+    .header{
+
+        &--titulo{
+
+            font-size: 55px;
+    
+        }
+
+        &--logo{
+
+            width: 260px;
+    
+            height: 150px;
+        }
+
+        &__desktop{
+
+            display: flex;
+    
+        }
+
+        &__mobile{
+
+            &--icono{
+
+                display: none;
+        
+            }
+
+        }
+
+    }
+
+}

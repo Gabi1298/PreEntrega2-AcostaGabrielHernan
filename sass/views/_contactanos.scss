@@ -1,0 +1,86 @@
+@import "../utils/variables";
+
+.main__container__formulario--comentario{
+
+    color: #077d9e;
+
+    text-align: center;
+
+    height: 180px;
+
+    background: transparent;
+
+    border-radius: 5px solid;
+
+    border-color: $Color_texto;
+
+    border-radius: 15px;
+
+    outline: none;
+
+    width: 210px;
+
+    &:hover{
+
+        box-shadow: 0px 0px 60px 15px rgba(7,125,158,0.8);
+    
+    }
+
+    &:focus{
+
+        box-shadow: 0px 0px 60px 15px rgba(7,125,158,0.8);
+    
+    }
+
+    &--checkbox{
+
+        width: 25px;
+    
+        height: 25px;
+    
+        accent-color: $Color_texto;
+    
+    }
+    
+
+}
+
+@media (min-width: $bpS) {
+
+    .main__container__formulario--comentario{
+
+        width: 370px;
+
+    }
+
+}
+
+@media (min-width: $bpM) {
+
+    .main__container__formulario--comentario{
+
+        width: 450px;
+
+    }
+
+}
+
+@media (min-width: $bpL) {
+
+    .main__container__formulario--comentario{
+
+        width: 550px;
+
+    }
+
+}
+
+@media (min-width: $bpXL) {
+
+    .main__container__formulario--comentario{
+
+        width: 650px;
+
+    }
+
+}

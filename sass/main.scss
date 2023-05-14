@@ -1,26 +1,4 @@
-// Fuentes
-
-    @font-face {
-
-    font-family: "start";
-
-    src: url(../asets/text/PressStart2P-Regular.ttf);
-
-}
-
-    @font-face {
-
-    font-family: "monserrat";
-
-    src: url(../asets/text/Montserrat-Italic-VariableFont_wght.ttf);
-
-}
-
 // Import
-
-    // Header
-
-    @import "./components/header";
 
     // Globales
 
@@ -30,144 +8,26 @@
 
     @import "./utils/variables";
 
-// Anidamiento en sass
+    // Header en todos los HTML
 
-.main{
+    @import "./components/header";
 
-    display: flex;
+    // Footer en todos los HTML
 
-    justify-content: center;
+    @import "./components/footer";
 
-    &__container{
+    // Import de todos los HTML
 
-        display: flex;
+    // Index
 
-        flex-flow: column wrap;
+    @import "./views/index";
 
-        justify-content: center;
+    // Contactanos
 
-        width: 250px;
+    @import "./views/contactanos";
 
-        &--parrafo{
+    // Novedades
 
-            margin: 15px 0;
+    @import "./views/novedades";
 
-            text-align: center;
-        
-            color: $Color_texto ;
-        
-            font-family: "monserrat";
-        
-            font-size: 12px;
-
-        }
-
-        &--subtitulo{
-
-            font-family: "start";
-
-            font-size: 15px;
-        
-            color: $Color_texto;
-        
-            text-align: center;
-        
-            margin: 20px 0px;
-
-        }
-
-        &--lista{
-
-            padding-left: 1rem;
-
-        }
-
-        &--horarios{
-
-            width: 215px;
-
-            height: 30px;
-        
-            color: $Color_texto;
-        
-            font-family: "monserrat";
-        
-            background-color: #19a7ce65;
-        
-            text-align: center;
-        
-            padding: 5px 0;
-        
-            margin: 10px 0;
-        
-            font-size: 12px;
-        
-            border-radius: 10px;
-
-        }
-
-        &__formulario{
-
-            display: flex;
-
-            flex-flow: row wrap;
-
-            justify-content: center;
-
-            margin: 5px 0;
-
-            &--label{
-
-                text-align: center;
-
-                padding-bottom: 10px;
-
-                font-family: "monserrat";
-
-                font-size: 12px;
-
-                color: $Color_texto;
-
-            }
-
-            &--input{
-
-                color: #077d9e;
-
-                text-align: center;
-            
-                height: 25px;
-            
-                width: 175px;
-            
-                background: transparent;
-            
-                border-radius: 5px solid;
-            
-                border-color: #19A7CE;
-            
-                border-radius: 15px;
-            
-                outline: none;
-            
-                margin: 10px 0;
-
-                &:hover{
-
-                    box-shadow: 0px 0px 60px 15px rgba(7,125,158,0.8);
-
-                }
-
-                &:focus{
-
-                    box-shadow: 0px 0px 60px 15px rgba(7,125,158,0.8);
-
-                }
-
-            }
-
-        }
-
-    }
-
-}
+    // 

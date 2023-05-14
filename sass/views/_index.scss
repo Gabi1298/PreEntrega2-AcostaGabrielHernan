@@ -28,12 +28,6 @@
 
     perspective: 1000px;
 
-    &:hover{
-
-        transform: rotateY(180deg);
-
-    }
-
     &--conteiner{
 
         position: relative;
@@ -47,8 +41,6 @@
         transition: transform 0.6ms;
     
         transform-style: preserve-3d;
-
-        transform: rotateY(180deg);
     
     }
 
@@ -72,18 +64,6 @@
     
         transform: rotateY(180deg);
 
-        position: absolute;
-
-        width: 100%;
-    
-        height: 100%;
-    
-        -webkit-backface-visibility: hidden;
-    
-        backface-visibility: hidden;
-    
-        border-radius: 16px;
-
         img{
 
             width: 90px;
@@ -98,18 +78,6 @@
 
         background-image: linear-gradient(45deg, #0427c4, #388cdf);
 
-        position: absolute;
-
-        width: 100%;
-    
-        height: 100%;
-    
-        -webkit-backface-visibility: hidden;
-    
-        backface-visibility: hidden;
-    
-        border-radius: 16px;
-
         img{
 
             width: 140px;
@@ -119,6 +87,28 @@
         }
     
     }
+
+}
+
+.flip__card:hover .flip__card--conteiner{
+
+    transform: rotateY(180deg);
+
+}
+
+.flip__card--front ,.flip__card--back{
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    -webkit-backface-visibility: hidden;
+
+    backface-visibility: hidden;
+
+    border-radius: 16px;
 
 }
 

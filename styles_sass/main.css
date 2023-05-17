@@ -266,6 +266,9 @@ p {
   text-align: center;
   margin: 20px 0;
 }
+.header__mobile--item a {
+  color: #19A7CE;
+}
 .header__mobile--icono {
   color: #19A7CE;
   font-size: 50px;

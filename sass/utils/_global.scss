@@ -86,21 +86,27 @@ p {
 
 }
 
-// Anidamiento en sass
+// Extend
 
-.main{
+.contenedor{
 
     display: flex;
 
     justify-content: center;
 
+}
+
+// Anidamiento en sass
+
+.main{
+
+    @extend .contenedor;
+
     &__container{
 
-        display: flex;
+        @extend .contenedor;
 
         flex-flow: column wrap;
-
-        justify-content: center;
 
         width: 250px;
 
@@ -164,11 +170,9 @@ p {
 
         &__formulario{
 
-            display: flex;
+            @extend .contenedor;
 
             flex-flow: row wrap;
-
-            justify-content: center;
 
             margin: 5px 0;
 

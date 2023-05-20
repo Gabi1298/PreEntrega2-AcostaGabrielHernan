@@ -1,20 +1,16 @@
 // Import
 
-    // Globales
-
-    @import "./utils/global";
-
     // Variables
 
     @import "./utils/variables";
 
+    // Globales
+
+    @import "./utils/global";
+
     // Header en todos los HTML
 
     @import "./components/header";
-
-    // Footer en todos los HTML
-
-    @import "./components/footer";
 
     // Import de todos los HTML
 
@@ -30,4 +26,6 @@
 
     @import "./views/novedades";
 
-    // 
+    // Footer en todos los HTML
+
+    @import "./components/footer";

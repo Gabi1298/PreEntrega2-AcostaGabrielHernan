@@ -80,31 +80,50 @@
     
     }
 
-    &__mobile--item{
+    &__mobile{
+    
+        &--item{
 
-        font-family: "start";
+            font-family: "start";
     
-        color: $Color_texto;
+            color: $Color_texto;
     
-        font-size: 10px;
+            font-size: 10px;
     
-        text-align: center;
+            text-align: center;
     
-        margin: 20px 0;
+            margin: 20px 0;
 
-        a {
+            a{
+
+                color: $Color_texto;
+    
+            }
+    
+        }
+
+        &--icono{
 
             color: $Color_texto;
+    
+            font-size: 35px;
 
         }
-    
-    }
 
-    &__mobile--icono{
+        &--logo{
 
-        color: $Color_texto;
-    
-        font-size: 35px;
+
+            .img--mobile{
+
+                width: 300px;
+
+                height: 300px;
+
+                margin: 0 30px;
+
+            }
+
+        }
     
     }
 

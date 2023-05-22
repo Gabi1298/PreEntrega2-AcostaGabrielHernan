@@ -530,3 +530,78 @@ p {
   height: 100%;
   width: 100%;
 }
+.footer--subtitulo {
+  font-family: "monserrat";
+  font-size: 15px;
+  padding: 0 10px;
+}
+.footer__container {
+  height: 100%;
+  width: 100%;
+  font-family: "monserrat";
+  padding-top: 10px;
+  background-color: gray;
+}
+.footer__container--rrss {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer__container--rrss .facebook {
+  color: black;
+  font-size: 20px;
+}
+.footer__container--rrss .facebook:hover {
+  color: #1877f2;
+}
+.footer__container--rrss .instagram {
+  color: black;
+  font-size: 20px;
+}
+.footer__container--rrss .instagram:hover {
+  color: #D43089;
+}
+.footer__container--rrss .twitter {
+  color: black;
+  font-size: 20px;
+}
+.footer__container--rrss .twitter:hover {
+  color: #1DA1F2;
+}
+.footer__container--rrss .whatsapp {
+  color: black;
+  font-size: 20px;
+}
+.footer__container--rrss .whatsapp:hover {
+  color: #25D366;
+}
+.footer__container--rrss .telegram {
+  color: black;
+  font-size: 20px;
+}
+.footer__container--rrss .telegram:hover {
+  color: #229ED9;
+}
+.footer__container--rrss .youtube {
+  color: black;
+  font-size: 20px;
+}
+.footer__container--rrss .youtube:hover {
+  color: #FF0000;
+}
+.footer__container--mdp {
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .footer__container--rrss {
+    padding: 15px 0;
+  }
+  .footer__container--rrss i {
+    font-size: 30px;
+  }
+  .footer__container--mdp {
+    width: 500px;
+    height: 160px;
+  }
+}

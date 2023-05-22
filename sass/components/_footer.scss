@@ -16,4 +16,111 @@
     
     }
 
+    &--subtitulo{
+
+        font-family: "monserrat";
+
+        font-size: 15px;
+
+        padding: 0 10px;
+
+    }
+
+    &__container{
+        
+        height: 100%;
+
+        width: 100%;
+
+        font-family: "monserrat";
+
+        padding-top: 10px;
+
+        background-color: gray;
+
+        &--rrss{
+
+            display: flex;
+
+            justify-content: space-evenly;
+
+            // Mapa
+
+            $social-icons: (
+
+            facebook: #1877f2,
+
+            instagram: #D43089,
+
+            twitter: #1DA1F2,
+
+            whatsapp: #25D366,
+
+            telegram: #229ED9,
+
+            youtube: #FF0000
+
+            );
+
+            // Bucle
+
+            @each $social-name, $social-color in $social-icons{
+
+                .#{$social-name} {
+
+                    color: black;
+
+                    font-size: 20px;
+
+                    &:hover {
+
+                    color: $social-color;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        &--mdp{
+
+            height: 100%;
+
+            width: 100%;
+
+        }
+
+    }
+
+}
+
+@media (min-width: $bpS){
+
+    .footer__container{
+    
+        &--rrss{
+
+            padding: 15px 0;
+
+            i{
+
+                font-size: 30px;
+
+            }
+
+        }
+
+        &--mdp{
+
+            width: 500px;
+
+            height: 160px;
+
+        }
+
+    }
+
+
 }

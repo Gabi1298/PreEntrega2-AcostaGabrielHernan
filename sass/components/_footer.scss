@@ -38,6 +38,48 @@
 
         background-color: gray;
 
+        &--info{
+
+            display: flex;
+
+            flex-flow: column;
+
+            &--texto{
+
+                font-family: "start";
+
+                font-size: 8px;
+            
+                padding-top: 10px;
+            
+                padding-bottom: 10px;
+            
+                text-align: center;
+
+            }
+
+            &--a{
+
+                color: black;
+
+                &:hover{
+
+                    text-shadow: 2px 2px 1px white;
+
+                }
+
+            }
+
+        }
+
+        &--list{
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
         &--rrss{
 
             display: flex;
@@ -74,7 +116,7 @@
 
                     &:hover {
 
-                    color: $social-color;
+                        color: $social-color;
 
                     }
 
@@ -122,5 +164,23 @@
 
     }
 
+
+}
+
+@media (min-width: $bpM) {
+
+    .footer__container--info{
+
+        flex-flow: row;
+
+        justify-content: space-around;
+
+    }
+
+    .footer__container--info--texto{
+
+        font-size: 12px;
+
+    }
 
 }

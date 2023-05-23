@@ -11,9 +11,9 @@
 
 <url>
 
-  <loc>https://gabi1298.github.io/PreEntrega2-AcostaGabrielHernan/</loc>
+  <loc>https://gabi1298.github.io/PreEntrega3-AcostaGabrielHernan/</loc>
 
-  <lastmod>2023-05-22T23:35:02+00:00</lastmod>
+  <lastmod>2023-05-23T14:35:09+00:00</lastmod>
 
   <priority>1.00</priority>
 
@@ -21,19 +21,9 @@
 
 <url>
 
-  <loc>https://gabi1298.github.io/PreEntrega2-AcostaGabrielHernan/index.html</loc>
+  <loc>https://gabi1298.github.io/PreEntrega3-AcostaGabrielHernan/index.html</loc>
 
-  <lastmod>2023-05-22T23:35:02+00:00</lastmod>
-
-  <priority>0.80</priority>
-
-</url>
-
-<url>
-
-  <loc>https://gabi1298.github.io/PreEntrega2-AcostaGabrielHernan/pages/contactanos.html</loc>
-
-  <lastmod>2023-05-22T23:35:02+00:00</lastmod>
+  <lastmod>2023-05-23T14:35:09+00:00</lastmod>
 
   <priority>0.80</priority>
 
@@ -41,19 +31,9 @@
 
 <url>
 
-  <loc>https://gabi1298.github.io/PreEntrega2-AcostaGabrielHernan/pages/sobre-nosotros.html</loc>
+  <loc>https://gabi1298.github.io/PreEntrega3-AcostaGabrielHernan/pages/contactanos.html</loc>
 
-  <lastmod>2023-05-22T23:35:02+00:00</lastmod>
-
-  <priority>0.80</priority>
-
-</url>
-
-<url>
-
-  <loc>https://gabi1298.github.io/PreEntrega2-AcostaGabrielHernan/pages/novedades.html</loc>
-
-  <lastmod>2023-05-22T23:35:02+00:00</lastmod>
+  <lastmod>2023-05-23T14:35:09+00:00</lastmod>
 
   <priority>0.80</priority>
 
@@ -61,13 +41,30 @@
 
 <url>
 
-  <loc>https://gabi1298.github.io/PreEntrega2-AcostaGabrielHernan/pages/trabaja-con-nosotros.html</loc>
+  <loc>https://gabi1298.github.io/PreEntrega3-AcostaGabrielHernan/pages/sobre-nosotros.html</loc>
 
-  <lastmod>2023-05-22T23:35:02+00:00</lastmod>
+  <lastmod>2023-05-23T14:35:09+00:00</lastmod>
 
   <priority>0.80</priority>
-  
+
 </url>
 
+<url>
 
-</urlset>
+  <loc>https://gabi1298.github.io/PreEntrega3-AcostaGabrielHernan/pages/novedades.html</loc>
+
+  <lastmod>2023-05-23T14:35:09+00:00</lastmod>
+
+  <priority>0.80</priority>
+
+</url>
+
+<url>
+
+  <loc>https://gabi1298.github.io/PreEntrega3-AcostaGabrielHernan/pages/trabaja-con-nosotros.html</loc>
+
+  <lastmod>2023-05-23T14:35:09+00:00</lastmod>
+
+  <priority>0.80</priority>
+
+</url>

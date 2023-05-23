@@ -1,5 +1,7 @@
 @import "../utils/variables";
 
+@import "../utils/global";
+
 .carousel--image{
 
     height: 160px;
@@ -32,9 +34,7 @@
 
         position: relative;
     
-        width: 100%;
-    
-        height: 100%;
+        @extend .conteiner--size;
     
         text-align: center;
     
@@ -100,9 +100,7 @@
 
     position: absolute;
 
-    width: 100%;
-
-    height: 100%;
+    @extend .conteiner--size;
 
     -webkit-backface-visibility: hidden;
 

@@ -1,5 +1,7 @@
 @import "../utils/variables";
 
+@import "../utils/global";
+
 .header{
 
     display: grid;
@@ -30,15 +32,13 @@
 
     &--titulo{
 
-        font-family: "start";
+        @extend .font--style1;
     
         font-weight: 100;
     
         font-size: 25px;
     
         color: $Color_texto;
-    
-        text-align: center;
 
         margin-bottom: 0;
     
@@ -66,15 +66,13 @@
 
         &--texto{
 
-            font-family: "start";
+            @extend .font--style1;
         
             color: $Color_texto;
         
             padding-top: 20px;
         
             padding-bottom: 20px;
-        
-            text-align: center;
         
         }
     
@@ -84,13 +82,11 @@
     
         &--item{
 
-            font-family: "start";
+            @extend .font--style1;
     
             color: $Color_texto;
     
             font-size: 10px;
-    
-            text-align: center;
     
             margin: 20px 0;
 

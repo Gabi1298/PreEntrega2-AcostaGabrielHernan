@@ -52,22 +52,33 @@ p {
   justify-content: center;
 }
 
+.conteiner--size, .flip__card--front, .flip__card--back, .flip__card--conteiner {
+  height: 100%;
+  width: 100%;
+}
+
+.font--style1, .header__mobile--item, .header__desktop--texto, .header--titulo, .main__container--subtitulo {
+  font-family: "start";
+  text-align: center;
+}
+
+.font--style2, .main__container__formulario--comentario, .main__container__formulario--input, .main__container__formulario--label, .main__container--horarios, .main__container--parrafo {
+  font-family: "monserrat";
+  text-align: center;
+}
+
 .main__container {
   flex-flow: column wrap;
   width: 250px;
 }
 .main__container--parrafo {
   margin: 15px 0;
-  text-align: center;
   color: #19A7CE;
-  font-family: "monserrat";
   font-size: 12px;
 }
 .main__container--subtitulo {
-  font-family: "start";
   font-size: 15px;
   color: #19A7CE;
-  text-align: center;
   margin: 20px 0px;
 }
 .main__container--lista {
@@ -77,9 +88,7 @@ p {
   width: 215px;
   height: 30px;
   color: #19A7CE;
-  font-family: "monserrat";
   background-color: rgba(25, 167, 206, 0.3960784314);
-  text-align: center;
   padding: 5px 0;
   margin: 10px 0;
   font-size: 12px;
@@ -90,15 +99,12 @@ p {
   margin: 5px 0;
 }
 .main__container__formulario--label {
-  text-align: center;
   padding-bottom: 10px;
-  font-family: "monserrat";
   font-size: 12px;
   color: #19A7CE;
 }
 .main__container__formulario--input {
-  color: #077d9e;
-  text-align: center;
+  color: #19A7CE;
   height: 25px;
   width: 175px;
   background: transparent;
@@ -109,10 +115,229 @@ p {
   margin: 10px 0;
 }
 .main__container__formulario--input:hover {
-  box-shadow: 0px 0px 60px 15px rgba(7, 125, 158, 0.8);
+  box-shadow: 0px 0px 10px 5px rgba(7, 125, 158, 0.8);
 }
 .main__container__formulario--input:focus {
-  box-shadow: 0px 0px 60px 15px rgba(7, 125, 158, 0.8);
+  box-shadow: 0px 0px 10px 5px rgba(7, 125, 158, 0.8);
+}
+
+@media (min-width: 500px) {
+  p {
+    line-height: 1.3;
+  }
+  .main__container {
+    width: 430px;
+  }
+  .main__container--parrafo {
+    font-size: 13px;
+  }
+  .main__container--horarios {
+    width: 400px;
+    height: 35px;
+    font-size: 13px;
+  }
+  .main__container__formulario--label {
+    width: 250px;
+    text-align: center;
+    font-size: 15px;
+  }
+  .main__container__formulario--input {
+    width: 370px;
+  }
+}
+@media (min-width: 600px) {
+  p {
+    line-height: 1.5;
+  }
+  .main__container {
+    width: 530px;
+  }
+  .main__container--parrafo {
+    font-size: 14px;
+  }
+  .main__container--subtitulo {
+    font-size: 20px;
+  }
+  .main__container--horarios {
+    width: 500px;
+    font-size: 14px;
+  }
+  .main__container__formulario--input {
+    width: 450px;
+  }
+  .main__container__formulario--label {
+    width: 300px;
+  }
+}
+@media (min-width: 768px) {
+  p {
+    line-height: 1.8;
+  }
+  .main__container {
+    width: 698px;
+  }
+  .main__container--parrafo {
+    font-size: 15px;
+  }
+  .main__container--subtitulo {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+  .main__container--horarios {
+    font-size: 15px;
+    width: 668px;
+  }
+  .main__container__formulario--label {
+    width: 500px;
+  }
+  .main__container__formulario--input {
+    width: 550px;
+  }
+}
+@media (min-width: 998px) {
+  .main__container {
+    width: 928px;
+  }
+  .main__container--parrafo {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .main__container--lista {
+    padding-left: 7.5rem;
+  }
+  .main__container--horarios {
+    font-size: 18px;
+    width: 700px;
+  }
+  .main__container__formulario--label {
+    width: 700px;
+    font-size: 14px;
+  }
+  .main__container__formulario--input {
+    width: 650px;
+  }
+}
+@font-face {
+  font-family: "start";
+  src: url(../asets/text/PressStart2P-Regular.ttf);
+}
+@font-face {
+  font-family: "monserrat";
+  src: url(../asets/text/Montserrat-Italic-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body--bg {
+  background-color: black;
+  height: 100%;
+  background-size: cover;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.2;
+}
+
+.body--hr {
+  background-color: #19A7CE;
+  margin: 10px 0;
+  height: 5px;
+  border: 1px solid;
+  box-shadow: 1px 4px 8px rgba(25, 167, 206, 0.5960784314);
+  opacity: 0.9;
+}
+
+::placeholder {
+  color: #19A7CE;
+}
+
+.contenedor, .main, .main__container, .main__container__formulario {
+  display: flex;
+  justify-content: center;
+}
+
+.conteiner--size, .flip__card--front, .flip__card--back, .flip__card--conteiner {
+  height: 100%;
+  width: 100%;
+}
+
+.font--style1, .header__mobile--item, .header__desktop--texto, .header--titulo, .main__container--subtitulo {
+  font-family: "start";
+  text-align: center;
+}
+
+.font--style2, .main__container__formulario--comentario, .main__container--parrafo, .main__container--horarios, .main__container__formulario--label, .main__container__formulario--input {
+  font-family: "monserrat";
+  text-align: center;
+}
+
+.main__container {
+  flex-flow: column wrap;
+  width: 250px;
+}
+.main__container--parrafo {
+  margin: 15px 0;
+  color: #19A7CE;
+  font-size: 12px;
+}
+.main__container--subtitulo {
+  font-size: 15px;
+  color: #19A7CE;
+  margin: 20px 0px;
+}
+.main__container--lista {
+  padding-left: 1rem;
+}
+.main__container--horarios {
+  width: 215px;
+  height: 30px;
+  color: #19A7CE;
+  background-color: rgba(25, 167, 206, 0.3960784314);
+  padding: 5px 0;
+  margin: 10px 0;
+  font-size: 12px;
+  border-radius: 10px;
+}
+.main__container__formulario {
+  flex-flow: row wrap;
+  margin: 5px 0;
+}
+.main__container__formulario--label {
+  padding-bottom: 10px;
+  font-size: 12px;
+  color: #19A7CE;
+}
+.main__container__formulario--input {
+  color: #19A7CE;
+  height: 25px;
+  width: 175px;
+  background: transparent;
+  border-radius: 5px solid;
+  border-color: #19A7CE;
+  border-radius: 15px;
+  outline: none;
+  margin: 10px 0;
+}
+.main__container__formulario--input:hover {
+  box-shadow: 0px 0px 10px 5px rgba(7, 125, 158, 0.8);
+}
+.main__container__formulario--input:focus {
+  box-shadow: 0px 0px 10px 5px rgba(7, 125, 158, 0.8);
 }
 
 @media (min-width: 500px) {
@@ -227,11 +452,9 @@ p {
   justify-self: center;
 }
 .header--titulo {
-  font-family: "start";
   font-weight: 100;
   font-size: 25px;
   color: #19A7CE;
-  text-align: center;
   margin-bottom: 0;
 }
 .header__desktop {
@@ -246,17 +469,13 @@ p {
   text-shadow: 2px 2px 1px #AFD3E2;
 }
 .header__desktop--texto {
-  font-family: "start";
   color: #19A7CE;
   padding-top: 20px;
   padding-bottom: 20px;
-  text-align: center;
 }
 .header__mobile--item {
-  font-family: "start";
   color: #19A7CE;
   font-size: 10px;
-  text-align: center;
   margin: 20px 0;
 }
 .header__mobile--item a {
@@ -317,6 +536,225 @@ p {
     display: none;
   }
 }
+@font-face {
+  font-family: "start";
+  src: url(../asets/text/PressStart2P-Regular.ttf);
+}
+@font-face {
+  font-family: "monserrat";
+  src: url(../asets/text/Montserrat-Italic-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body--bg {
+  background-color: black;
+  height: 100%;
+  background-size: cover;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.2;
+}
+
+.body--hr {
+  background-color: #19A7CE;
+  margin: 10px 0;
+  height: 5px;
+  border: 1px solid;
+  box-shadow: 1px 4px 8px rgba(25, 167, 206, 0.5960784314);
+  opacity: 0.9;
+}
+
+::placeholder {
+  color: #19A7CE;
+}
+
+.contenedor, .main, .main__container, .main__container__formulario {
+  display: flex;
+  justify-content: center;
+}
+
+.conteiner--size, .flip__card--front, .flip__card--back, .flip__card--conteiner {
+  height: 100%;
+  width: 100%;
+}
+
+.font--style1, .main__container--subtitulo, .header--titulo, .header__desktop--texto, .header__mobile--item {
+  font-family: "start";
+  text-align: center;
+}
+
+.font--style2, .main__container__formulario--comentario, .main__container--parrafo, .main__container--horarios, .main__container__formulario--label, .main__container__formulario--input {
+  font-family: "monserrat";
+  text-align: center;
+}
+
+.main__container {
+  flex-flow: column wrap;
+  width: 250px;
+}
+.main__container--parrafo {
+  margin: 15px 0;
+  color: #19A7CE;
+  font-size: 12px;
+}
+.main__container--subtitulo {
+  font-size: 15px;
+  color: #19A7CE;
+  margin: 20px 0px;
+}
+.main__container--lista {
+  padding-left: 1rem;
+}
+.main__container--horarios {
+  width: 215px;
+  height: 30px;
+  color: #19A7CE;
+  background-color: rgba(25, 167, 206, 0.3960784314);
+  padding: 5px 0;
+  margin: 10px 0;
+  font-size: 12px;
+  border-radius: 10px;
+}
+.main__container__formulario {
+  flex-flow: row wrap;
+  margin: 5px 0;
+}
+.main__container__formulario--label {
+  padding-bottom: 10px;
+  font-size: 12px;
+  color: #19A7CE;
+}
+.main__container__formulario--input {
+  color: #19A7CE;
+  height: 25px;
+  width: 175px;
+  background: transparent;
+  border-radius: 5px solid;
+  border-color: #19A7CE;
+  border-radius: 15px;
+  outline: none;
+  margin: 10px 0;
+}
+.main__container__formulario--input:hover {
+  box-shadow: 0px 0px 10px 5px rgba(7, 125, 158, 0.8);
+}
+.main__container__formulario--input:focus {
+  box-shadow: 0px 0px 10px 5px rgba(7, 125, 158, 0.8);
+}
+
+@media (min-width: 500px) {
+  p {
+    line-height: 1.3;
+  }
+  .main__container {
+    width: 430px;
+  }
+  .main__container--parrafo {
+    font-size: 13px;
+  }
+  .main__container--horarios {
+    width: 400px;
+    height: 35px;
+    font-size: 13px;
+  }
+  .main__container__formulario--label {
+    width: 250px;
+    text-align: center;
+    font-size: 15px;
+  }
+  .main__container__formulario--input {
+    width: 370px;
+  }
+}
+@media (min-width: 600px) {
+  p {
+    line-height: 1.5;
+  }
+  .main__container {
+    width: 530px;
+  }
+  .main__container--parrafo {
+    font-size: 14px;
+  }
+  .main__container--subtitulo {
+    font-size: 20px;
+  }
+  .main__container--horarios {
+    width: 500px;
+    font-size: 14px;
+  }
+  .main__container__formulario--input {
+    width: 450px;
+  }
+  .main__container__formulario--label {
+    width: 300px;
+  }
+}
+@media (min-width: 768px) {
+  p {
+    line-height: 1.8;
+  }
+  .main__container {
+    width: 698px;
+  }
+  .main__container--parrafo {
+    font-size: 15px;
+  }
+  .main__container--subtitulo {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+  .main__container--horarios {
+    font-size: 15px;
+    width: 668px;
+  }
+  .main__container__formulario--label {
+    width: 500px;
+  }
+  .main__container__formulario--input {
+    width: 550px;
+  }
+}
+@media (min-width: 998px) {
+  .main__container {
+    width: 928px;
+  }
+  .main__container--parrafo {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .main__container--lista {
+    padding-left: 7.5rem;
+  }
+  .main__container--horarios {
+    font-size: 18px;
+    width: 700px;
+  }
+  .main__container__formulario--label {
+    width: 700px;
+    font-size: 14px;
+  }
+  .main__container__formulario--input {
+    width: 650px;
+  }
+}
 .carousel--image {
   height: 160px;
 }
@@ -336,8 +774,6 @@ p {
 }
 .flip__card--conteiner {
   position: relative;
-  width: 100%;
-  height: 100%;
   text-align: center;
   transition: transform 0.5s;
   transform-style: preserve-3d;
@@ -371,8 +807,6 @@ p {
 
 .flip__card--front, .flip__card--back {
   position: absolute;
-  width: 100%;
-  height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 16px;
@@ -446,9 +880,227 @@ p {
     width: 150px;
   }
 }
-.main__container__formulario--comentario {
-  color: #077d9e;
+@font-face {
+  font-family: "start";
+  src: url(../asets/text/PressStart2P-Regular.ttf);
+}
+@font-face {
+  font-family: "monserrat";
+  src: url(../asets/text/Montserrat-Italic-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body--bg {
+  background-color: black;
+  height: 100%;
+  background-size: cover;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.2;
+}
+
+.body--hr {
+  background-color: #19A7CE;
+  margin: 10px 0;
+  height: 5px;
+  border: 1px solid;
+  box-shadow: 1px 4px 8px rgba(25, 167, 206, 0.5960784314);
+  opacity: 0.9;
+}
+
+::placeholder {
+  color: #19A7CE;
+}
+
+.contenedor, .main, .main__container, .main__container__formulario {
+  display: flex;
+  justify-content: center;
+}
+
+.conteiner--size, .flip__card--conteiner, .flip__card--front, .flip__card--back {
+  height: 100%;
+  width: 100%;
+}
+
+.font--style1, .main__container--subtitulo, .header--titulo, .header__desktop--texto, .header__mobile--item {
+  font-family: "start";
   text-align: center;
+}
+
+.font--style2, .main__container__formulario--comentario, .main__container--parrafo, .main__container--horarios, .main__container__formulario--label, .main__container__formulario--input {
+  font-family: "monserrat";
+  text-align: center;
+}
+
+.main__container {
+  flex-flow: column wrap;
+  width: 250px;
+}
+.main__container--parrafo {
+  margin: 15px 0;
+  color: #19A7CE;
+  font-size: 12px;
+}
+.main__container--subtitulo {
+  font-size: 15px;
+  color: #19A7CE;
+  margin: 20px 0px;
+}
+.main__container--lista {
+  padding-left: 1rem;
+}
+.main__container--horarios {
+  width: 215px;
+  height: 30px;
+  color: #19A7CE;
+  background-color: rgba(25, 167, 206, 0.3960784314);
+  padding: 5px 0;
+  margin: 10px 0;
+  font-size: 12px;
+  border-radius: 10px;
+}
+.main__container__formulario {
+  flex-flow: row wrap;
+  margin: 5px 0;
+}
+.main__container__formulario--label {
+  padding-bottom: 10px;
+  font-size: 12px;
+  color: #19A7CE;
+}
+.main__container__formulario--input {
+  color: #19A7CE;
+  height: 25px;
+  width: 175px;
+  background: transparent;
+  border-radius: 5px solid;
+  border-color: #19A7CE;
+  border-radius: 15px;
+  outline: none;
+  margin: 10px 0;
+}
+.main__container__formulario--input:hover {
+  box-shadow: 0px 0px 10px 5px rgba(7, 125, 158, 0.8);
+}
+.main__container__formulario--input:focus {
+  box-shadow: 0px 0px 10px 5px rgba(7, 125, 158, 0.8);
+}
+
+@media (min-width: 500px) {
+  p {
+    line-height: 1.3;
+  }
+  .main__container {
+    width: 430px;
+  }
+  .main__container--parrafo {
+    font-size: 13px;
+  }
+  .main__container--horarios {
+    width: 400px;
+    height: 35px;
+    font-size: 13px;
+  }
+  .main__container__formulario--label {
+    width: 250px;
+    text-align: center;
+    font-size: 15px;
+  }
+  .main__container__formulario--input {
+    width: 370px;
+  }
+}
+@media (min-width: 600px) {
+  p {
+    line-height: 1.5;
+  }
+  .main__container {
+    width: 530px;
+  }
+  .main__container--parrafo {
+    font-size: 14px;
+  }
+  .main__container--subtitulo {
+    font-size: 20px;
+  }
+  .main__container--horarios {
+    width: 500px;
+    font-size: 14px;
+  }
+  .main__container__formulario--input {
+    width: 450px;
+  }
+  .main__container__formulario--label {
+    width: 300px;
+  }
+}
+@media (min-width: 768px) {
+  p {
+    line-height: 1.8;
+  }
+  .main__container {
+    width: 698px;
+  }
+  .main__container--parrafo {
+    font-size: 15px;
+  }
+  .main__container--subtitulo {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+  .main__container--horarios {
+    font-size: 15px;
+    width: 668px;
+  }
+  .main__container__formulario--label {
+    width: 500px;
+  }
+  .main__container__formulario--input {
+    width: 550px;
+  }
+}
+@media (min-width: 998px) {
+  .main__container {
+    width: 928px;
+  }
+  .main__container--parrafo {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .main__container--lista {
+    padding-left: 7.5rem;
+  }
+  .main__container--horarios {
+    font-size: 18px;
+    width: 700px;
+  }
+  .main__container__formulario--label {
+    width: 700px;
+    font-size: 14px;
+  }
+  .main__container__formulario--input {
+    width: 650px;
+  }
+}
+.main__container__formulario--comentario {
+  color: #19A7CE;
   height: 180px;
   background: transparent;
   border-radius: 5px solid;
@@ -458,10 +1110,10 @@ p {
   width: 210px;
 }
 .main__container__formulario--comentario:hover {
-  box-shadow: 0px 0px 60px 15px rgba(7, 125, 158, 0.8);
+  box-shadow: 0px 0px 10px 5px rgba(7, 125, 158, 0.8);
 }
 .main__container__formulario--comentario:focus {
-  box-shadow: 0px 0px 60px 15px rgba(7, 125, 158, 0.8);
+  box-shadow: 0px 0px 10px 5px rgba(7, 125, 158, 0.8);
 }
 .main__container__formulario--comentario--checkbox {
   width: 25px;

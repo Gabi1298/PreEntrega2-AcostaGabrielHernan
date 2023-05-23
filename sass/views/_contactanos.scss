@@ -1,10 +1,12 @@
 @import "../utils/variables";
 
+@import "../utils/global";
+
 .main__container__formulario--comentario{
 
-    color: #077d9e;
+    @extend .font--style2;
 
-    text-align: center;
+    color: $Color_texto;
 
     height: 180px;
 
@@ -22,13 +24,13 @@
 
     &:hover{
 
-        box-shadow: 0px 0px 60px 15px rgba(7,125,158,0.8);
+        box-shadow: 0px 0px 10px 5px rgba(7,125,158,0.8);
     
     }
 
     &:focus{
 
-        box-shadow: 0px 0px 60px 15px rgba(7,125,158,0.8);
+        box-shadow: 0px 0px 10px 5px rgba(7,125,158,0.8);
     
     }
 

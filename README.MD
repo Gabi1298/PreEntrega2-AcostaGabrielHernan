@@ -1,9 +1,5 @@
-# PFM2
+# Proyecto Final
 
-Esta es mi segunda Pre-Entrega sobre el desarrollo de una pagina web, la misma la estoy realizando en la institucion **CoderHouse**.
+Principalmente este repositorio estaba destinado a mi proyecto final del curso de Desarrollo Web para la institucion de CoderHouse, el mismo lo finalice y realice la entrega del Proyecto. 
 
-Estuve modificando este archivo pasando todas mis clases desde CSS hacia el formato de SASS, para poder entregar mi proyecto en la tercera Pre-Entrega antes de entregar el Proyecto Final.
-
-Mi proyecto final fue entregado y aprovado.
-
-Al proyercto de Desarrollo Web estoy empezando a agragarle Javascript, voy a utilizar este mismo para el curso de Javascript.
+Actualmente estoy realizando un curso de JavaScript y voy a utilizar el mismo repositorio y el mismo proyecto que estaba usando en el curso anterior para realizar la entrega de mi proyecto final del nuevo curso.

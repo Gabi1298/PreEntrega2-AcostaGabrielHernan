@@ -42,13 +42,13 @@ do {
 
     if (usuario.toLowerCase() == "si") {
 
-        alert("Gracias por crear un usuario")
+        alert("Perfecto, te ayudaremos a crear uno 🤗")
 
     }
 
     else if (usuario.toLowerCase() == "no") {
 
-        alert("¡¡Te esperamos cuando quieras crear uno!!")
+        alert("¡¡Te esperamos cuando quieras crear uno!! 😌")
 
     }
 

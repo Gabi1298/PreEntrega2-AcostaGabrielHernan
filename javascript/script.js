@@ -74,7 +74,7 @@ do {
 
 } while (usuario.toLowerCase() !== "si" && usuario.toLowerCase() !== "no");
 
-// Carrito de compras base
+// Carrito de compras basado en lo visto en clase
 
 let productos = [
 
@@ -194,6 +194,8 @@ function precio_total() {
     let total = carrito.reduce((sum, item) => sum + item.subtotal, 0);
 
     console.log(`Total a pagar: ${total}`);
+
+    alert(`Total a pagar: ${total}`);
 
 }
   

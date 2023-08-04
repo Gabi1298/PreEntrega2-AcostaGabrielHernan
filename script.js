@@ -1,61 +1,127 @@
-let nombre = prompt("Ingresa tu nombre");
+let cart = [];
 
-let edad = Number(prompt("Ingresa tu edad"));
+    // Productos y precios
 
-let favorito = prompt("Ingresa tu juego favorito");
+let prices = {
 
-const BLANCO = " ";
+    "Joystick PS4 - Camuflado Rojo": 28500,
 
-function presentacion(nombre, edad, favorito) {
+    "Joystick PS4 - Blanco": 26500,
 
-    alert("Tu nombre es " + nombre + " tenes " + edad + " años y tu juego favorito es " + favorito);
+    "Joystick PS4 - Negro": 25500,
+
+    "Joystick PS4 - Rojo": 26500,
+
+    "Joystick PS5 - Rosa":35500,
+
+    "Joystick PS5 - Blanco":32500,
+
+    "Joystick PS5 - Negro":33500,
+
+    "Joystick Xbox Series X - Azul":36500,
+
+    "Joystick Xbox Series X - Blanco":33500,
+
+    "Joystick Xbox Series X - Negro":33500,
+};
+
+// Función para agregar un producto al carrito
+
+function addToCart(product) {
+
+    cart.push(product);
+
+    updateCart();
+
+    updateTotal();
+
+}
+
+// Función para actualizar el carrito
+
+function updateCart() {
     
-}
+    let cartListElement = document.getElementById("cart-list");
 
-presentacion(nombre, edad, favorito)
+    cartListElement.innerHTML = "";
 
-console.log("¡¡Hola!!" + BLANCO + nombre);
+    for (let i = 0; i < cart.length; i++) {
 
-console.log("¡Vaya tienes" + BLANCO + edad + BLANCO + "de edad!");
+        let cartItem = document.createElement("li");
 
-if (nombre.toLowerCase() == "eric") {
+        cartItem.textContent = cart[i];
+        
+        let removeButton = document.createElement("button");
 
-    console.log("Bienvenido a Zona Gaming Tutor Eric");
+        removeButton.textContent = "Eliminar";
 
-}
+        removeButton.setAttribute("data-index", i);
 
-else if (nombre.toLowerCase() == "gabriel") {
+        removeButton.addEventListener("click", removeFromCart);
 
-    console.log("Bienvenido de vuelta Jefe");
-
-}
-
-else {
-
-    alert("Bienvenido a tu proxima pagina gaming favorita");
-
-}
-
-let usuario = prompt("¿Desea crear un usuario? Si o No")
-
-do {
-
-    if (usuario.toLowerCase() == "si") {
-
-        alert("Perfecto, te ayudaremos a crear uno 🤗")
+        cartItem.appendChild(removeButton);
+        cartListElement.appendChild(cartItem);
 
     }
+    
+    let cartCountElement = document.getElementById("cart-count");
 
-    else if (usuario.toLowerCase() == "no") {
+    cartCountElement.textContent = cart.length;
 
-        alert("¡¡Te esperamos cuando quieras crear uno!! 😌")
+}
+
+// Función para actualizar el total de la compra
+
+function updateTotal() {
+
+    let total = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+
+        let product = cart[i];
+
+        if (prices.hasOwnProperty(product)) {
+
+            total += prices[product];
+
+        }
 
     }
+    
+    let totalElement = document.getElementById("cart-total");
+    totalElement.textContent = "$" + total.toFixed(2);
 
-    else {
+}
 
-        usuario = prompt("Por favor indique solamente si o no")
+// Función para eliminar un producto del carrito
+function removeFromCart(event) {
 
-    }
+    let index = event.target.getAttribute("data-index");
 
-} while (usuario.toLowerCase() !== "si" && usuario.toLowerCase() !== "no");
+    cart.splice(index, 1);
+
+    updateCart();
+
+    updateTotal();
+
+}
+
+// Manejador de eventos cuando se carga la ventana
+
+window.onload = function() {
+
+    let addToCartButtons = document.querySelectorAll(".add-to-cart-button");
+
+    addToCartButtons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            let product = button.getAttribute("data-product");
+
+            addToCart(product);
+
+        });
+
+    });
+
+};

@@ -1,222 +1,178 @@
-// Variables ingresadas por el usuario mediante un Prompt() para generar un objeto
+let cart = [];
 
-const objUsuario = {
+    // Productos y precios
 
-    nombre: nombre = prompt("Ingresa tu nombre:"),
-  
-    edad: edad = Number(prompt("Ingresa tu edad:")),
-  
-    juegoFavorito: favorito = prompt("Ingresa tu juego favorito:"),
-  
+let prices = {
+
+    "Joystick PS4 - Camuflado Rojo": 28500,
+
+    "Joystick PS4 - Blanco": 26500,
+
+    "Joystick PS4 - Negro": 25500,
+
+    "Joystick PS4 - Rojo": 26500,
+
+    "Joystick PS5 - Rosa":35500,
+
+    "Joystick PS5 - Blanco":32500,
+
+    "Joystick PS5 - Negro":33500,
+
+    "Joystick Xbox Series X - Azul":36500,
+
+    "Joystick Xbox Series X - Blanco":33500,
+
+    "Joystick Xbox Series X - Negro":33500,
 };
 
-const BLANCO = " ";
+// Función para agregar un producto al carrito
 
-// Presentacion del usuario mediante prompt y alert
+function addToCart(product) {
 
-function presentacion(nombre, edad, favorito) {
+    cart.push(product);
 
-    alert("Tu nombre es " + nombre + " tenes " + edad + " años y tu juego favorito es " + favorito);
-    
-    if (objUsuario.nombre.toLowerCase() === "eric") 
-    
-    {
+    updateCart();
 
-        console.log("Bienvenido a Zona Gaming Tutor Eric");
-
-    } 
-
-    else if (objUsuario.nombre.toLowerCase() === "gabriel") 
-    
-    {
-
-        console.log("Bienvenido de vuelta Jefe");
-
-    }
-    
-    else 
-    
-    {
-
-        console.log("Bienvenido a tu próxima página gaming favorita");
-
-    }
+    updateTotal();
 
 }
 
-presentacion(nombre, edad, favorito)
+// Función para actualizar el carrito
 
-// Crear un usuario mediante prompt
+function updateCart() {
 
-let usuario = prompt("¿Desea crear un usuario? Si o No")
+    let cartCountElement = document.getElementById("cart-count");
 
-do {
+    cartCountElement.textContent = "Productos en carrito: " + getTotalQuantity();
 
-    if (usuario.toLowerCase() == "si") {
+    let cartListElement = document.getElementById("cart-list");
+    cartListElement.innerHTML = "";
 
-        alert("Gracias, compartenos tu email para enviarte las respues al formulario de creacion de usuario")
+    let cartItems = getCartItemsWithQuantities();
 
-        prompt("Indicanos tu email")
+    cartItems.forEach(function (cartItem) {
 
-    }
+        let liElement = document.createElement("li");
 
-    else if (usuario.toLowerCase() == "no") {
+        liElement.textContent = cartItem.product + " - Cantidad: " + cartItem.quantity;
 
-        alert("¡¡Te esperamos cuando quieras crear uno!!")
+        let removeButton = document.createElement("button");
 
-    }
+        removeButton.textContent = "Eliminar";
 
-    else {
+        removeButton.setAttribute("data-product", cartItem.product); 
 
-        usuario = prompt("Por favor indique solamente si o no")
+        // Usamos data-product en lugar de data-index
+        removeButton.addEventListener("click", removeFromCart);
 
-    }
 
-} while (usuario.toLowerCase() !== "si" && usuario.toLowerCase() !== "no");
-
-// Carrito de compras basado en lo visto en clase
-
-let productos = [
-
-    {
-
-      nombreProducto: "Joystick PS4 Negro",
-
-      precio: 35000,
-
-    },
-
-    {
-
-      nombreProducto: "Joystick PS4 Azul",
-
-      precio: 36000,
-
-    },
-
-    {
-
-      nombreProducto: "Joystick PS5 Negro",
-
-      precio: 43000,
-
-    },
-
-    {
-
-      nombreProducto: "Joystick PS5 Blanco",
-
-      precio: 45000,
-
-    },
-
-    {
-
-      nombreProducto: "Joystick XBOX SX",
-
-      precio: 45000,
-
-    },
-
-    {
-
-      nombreProducto: "Joystick XBOX One",
-
-      precio: 35000,
-
-    },
-    
-];
-  
-let carrito = [];
-  
-function nuevo_producto() {
-
-    let seleccion = prompt("Nuestros Joystick en stock son : Joystick PS4 Negro, Joystick PS4 Azul, Joystick PS5 Negro, Joystick PS5 Blanco, Joystick XBOX SX, Joystick XBOX One");
-    
-    producto = productos.find((p) => p.nombreProducto.toLowerCase() === seleccion.toLowerCase());
-
-}
-  
-function sumar_al_carrito() {
-
-    if (producto) {
-
-      let cantidad = parseInt(prompt("Ingrese la cantidad que desea seleccionar:"));
-
-      carrito.push({
-
-        producto: producto.nombreProducto,
-
-        cantidad: cantidad,
-
-        subtotal: producto.precio * cantidad
-
-      });
-
-    } 
-
-    else 
-
-    {
-
-      alert("El producto seleccionado no existe. Por favor, vuelva a intentarlo.");
-
-    }
-}
-  
-function confirmar_productos() {
-
-    while (true) {
-
-      nuevo_producto();
-
-      sumar_al_carrito();
-  
-      if (!confirm("¿Desea agregar otro producto al carrito?")) {
-
-        break;
-
-      }
-    }
-}
-  
-function precio_total() {
-
-    console.log("Carrito de compras:");
-
-    carrito.forEach((item) => {
-
-      console.log(`- ${item.cantidad} ${item.producto}: ${item.subtotal}`);
+        liElement.appendChild(removeButton);
+        cartListElement.appendChild(liElement);
 
     });
-  
-    let total = carrito.reduce((sum, item) => sum + item.subtotal, 0);
 
-    console.log(`Total a pagar: ${total}`);
-
-    alert(`Total a pagar: ${total}`);
+    updateTotal();
 
 }
-  
-function vaciar() {
 
-    carrito = [];
+// Función para actualizar el total de la compra
 
-    console.log("El carrito ha sido vaciado.");
+function updateTotal() {
+
+    let total = 0;
+
+    getCartItemsWithQuantities().forEach(function (cartItem) {
+
+        if (prices.hasOwnProperty(cartItem.product)) {
+
+            total += prices[cartItem.product] * cartItem.quantity;
+
+        }
+
+    });
+
+    let totalElement = document.getElementById("cart-total");
+
+    totalElement.textContent = "$" + total.toFixed(2);
 
 }
-  
-confirmar_productos();
-  
-  if (carrito.length > 0) {
 
-    if (confirm("¿Desea vaciar el carrito?")) {
+// Función para obtener la cantidad total de un producto en el carrito
 
-      vaciar();
+function getTotalQuantity() {
+
+    let totalQuantity = 0;
+
+    getCartItemsWithQuantities().forEach(function (cartItem) {
+
+        totalQuantity += cartItem.quantity;
+
+    });
+
+    return totalQuantity;
+
+}
+
+// Función para eliminar un producto del carrito
+
+function removeFromCart(event) {
+
+    let product = event.target.getAttribute("data-product");
+
+    let index = cart.indexOf(product);
+
+    if (index !== -1) {
+
+        cart.splice(index, 1);
+
+        updateCart();
+
+        updateTotal();
 
     }
-
 }
-  
-precio_total();
+
+// Función para obtener la lista de productos en el carrito con cantidades
+
+function getCartItemsWithQuantities() {
+
+    let itemsWithQuantities = [];
+
+    cart.forEach(function (cartItem) {
+
+        let existingItem = itemsWithQuantities.find(item => item.product === cartItem);
+
+        if (existingItem) {
+
+            existingItem.quantity++;
+
+        } else {
+
+            itemsWithQuantities.push({ product: cartItem, quantity: 1 });
+
+        }
+
+    });
+
+    return itemsWithQuantities;
+}
+
+// Manejador de eventos cuando se carga la ventana
+
+window.onload = function () {
+
+    let addToCartButtons = document.querySelectorAll(".add-to-cart-button");
+
+    addToCartButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            let product = button.getAttribute("data-product");
+
+            addToCart(product);
+
+        });
+
+    });
+    
+};
